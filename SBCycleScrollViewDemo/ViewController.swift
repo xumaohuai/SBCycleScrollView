@@ -1,0 +1,107 @@
+//
+//  ViewController.swift
+//  SBCycleScrollView
+//
+//  Created by 徐茂怀 on 2018/6/13.
+//  Copyright © 2018年 徐茂怀. All rights reserved.
+//
+
+import UIKit
+
+class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource {
+    let descrips = ["网络图片","本地图片","上下滑动","按钮颜色","按钮大小","图片+文字","纯文字","圆点样式1","圆点样式2","圆点样式3","圆点样式4","圆点样式5","圆点样式6","圆点样式7"]
+    let imageUrls = ["https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=223537411,1266534519&fm=27&gp=0.jpg","https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2685199147,1103945554&fm=27&gp=0.jpg","https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1861035721,813915528&fm=27&gp=0.jpg","https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4085960618,879999175&fm=27&gp=0.jpg"]
+    let titles = ["https://github.com/","有问题可以联系我","我的qq:1005834829","简书博客搜索:徐老茂"]
+    let localImages = ["1.jpg","2.jpg","3.jpg"]
+    lazy var tableView : UITableView = {
+       let tableView = UITableView.init(frame: .init(x: 0, y: 0, width: self.view.width, height: self.view.height - 64), style: UITableViewStyle.plain)
+        tableView.register(DemoCell.classForCoder(), forCellReuseIdentifier: "cell")
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        tableView.tableFooterView = UIView()
+        return tableView
+    }()
+    //MARK:UITableViewDelegate,UITableViewDataSource
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 6 {
+            return 40
+        }
+        return 200
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return descrips.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return descrips[section]
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = DemoCell.init(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+        cell.cycleScrollView.imageURLStringsGroup = imageUrls
+        switch indexPath.section {
+        case 1:
+            cell.cycleScrollView.ImageNamesGroup = localImages
+        case 2:
+            cell.cycleScrollView.scrollDirection = UICollectionViewScrollDirection.vertical
+        case 3:
+            cell.cycleScrollView.currentPageDotColor = UIColor.red
+            cell.cycleScrollView.pageDotColor = UIColor.blue
+        case 4:
+            cell.cycleScrollView.pageControlDotRadius = 10
+        case 5:
+            cell.cycleScrollView.titlesGroup = titles;
+            cell.cycleScrollView.pageControlAliment = SBPageControlAliment.right
+        case 6:
+            cell.cycleScrollView.titlesGroup = titles;
+            cell.cycleScrollView.scrollDirection = UICollectionViewScrollDirection.vertical
+            cell.cycleScrollView.isOnlyDisplayText = true
+            cell.cycleScrollView.showPageControl = false
+            cell.cycleScrollView.TextAlignment = NSTextAlignment.center
+            cell.cycleScrollView.disableScrollGesture()
+        case 7:
+            cell.cycleScrollView.pageControlStyle = SBPageControlStyle.Aji
+        case 8:
+            cell.cycleScrollView.pageControlStyle = SBPageControlStyle.Aleppo
+        case 9:
+            cell.cycleScrollView.pageControlStyle = SBPageControlStyle.Chimayo
+        case 10:
+            cell.cycleScrollView.pageControlStyle = SBPageControlStyle.Jalapeno
+        case 11:
+            cell.cycleScrollView.pageControlStyle = SBPageControlStyle.Jaloro
+        case 12:
+            cell.cycleScrollView.pageControlStyle = SBPageControlStyle.Paprika
+        case 13:
+            cell.cycleScrollView.pageControlStyle = SBPageControlStyle.Puya
+
+        default: break
+        }
+        return cell
+    }
+    
+    
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       self.navigationController?.navigationBar.isTranslucent = false
+        view.addSubview(tableView)
+        self.title = "SBCycleScrollView"
+    }
+
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+
+}
+
