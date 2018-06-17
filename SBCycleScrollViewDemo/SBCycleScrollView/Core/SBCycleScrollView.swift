@@ -10,8 +10,8 @@ import UIKit
 import Kingfisher
 
 //MARK: 点击图片代理
-@objc protocol SBCycleScrollViewDelegate : NSObjectProtocol {
-  @objc optional func didSelectedCycleScrollView(_ cycleScrollView : SBCycleScrollView, _ Index : NSInteger)
+@objc public protocol SBCycleScrollViewDelegate : NSObjectProtocol {
+    @objc optional func didSelectedCycleScrollView(_ cycleScrollView : SBCycleScrollView, _ Index : NSInteger)
 }
 public enum SBPageControlAliment {
     case center,right
@@ -20,29 +20,29 @@ public enum SBPageControlStyle {
     case Classic,Aji,Aleppo,Chimayo,Jalapeno,Jaloro,Paprika,Puya
 }
 
-class SBCycleScrollView: UIView,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate {
+@IBDesignable open class SBCycleScrollView: UIView,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate {
     private let ID = "SBCycleScrollViewCell"
     //MARK: 自定义样式
     /**---------------------------------自定义样式------------------------------------------------*/
-   @IBInspectable var showPageControl : Bool = true//是否显示pageControl,默认显示
-    var hidesForSinglePage : Bool = true//只有一页时候是否隐藏pagec,默认隐藏
-    var isOnlyDisplayText : Bool = false//只显示文字,默认false
-    var pageControlAliment : SBPageControlAliment = SBPageControlAliment.center//pageControl位置,默认居中
-    var pageControlStyle : SBPageControlStyle = SBPageControlStyle.Classic{ //pageControl样式,默认系统样式
+    @IBInspectable open var showPageControl : Bool = true//是否显示pageControl,默认显示
+    open  var hidesForSinglePage : Bool = true//只有一页时候是否隐藏pagec,默认隐藏
+    open var isOnlyDisplayText : Bool = false//只显示文字,默认false
+    open  var pageControlAliment : SBPageControlAliment = SBPageControlAliment.center//pageControl位置,默认居中
+    open var pageControlStyle : SBPageControlStyle = SBPageControlStyle.Classic{ //pageControl样式,默认系统样式
         didSet {
             setupPageControl()
         }
     }
-   @IBInspectable var pageControlBottomOffset : CGFloat = 0//pageControl距离底部距离
-   @IBInspectable var pageControlRightOffset : CGFloat = 0//pageControl距离右侧距离
+    @IBInspectable open var pageControlBottomOffset : CGFloat = 0//pageControl距离底部距离
+    @IBInspectable open var pageControlRightOffset : CGFloat = 0//pageControl距离右侧距离
     //pageControl圆点半径
-    @IBInspectable var pageControlDotRadius : CGFloat = 5{
+    @IBInspectable open var pageControlDotRadius : CGFloat = 5{
         didSet {
             setupPageControl()
         }
     }
     //当前pageControl圆点的颜色
-    @IBInspectable var currentPageDotColor : UIColor = .white{
+    @IBInspectable open var currentPageDotColor : UIColor = .white{
         didSet{
             switch pageControl {
             case is UIPageControl:
@@ -57,7 +57,7 @@ class SBCycleScrollView: UIView,UICollectionViewDelegate,UICollectionViewDataSou
         }
     }
     //其他pageControl圆点的颜色
-    @IBInspectable  var pageDotColor : UIColor = .gray{
+    @IBInspectable open var pageDotColor : UIColor = .gray{
         didSet{
             switch pageControl {
             case is UIPageControl:
@@ -71,14 +71,14 @@ class SBCycleScrollView: UIView,UICollectionViewDelegate,UICollectionViewDataSou
             }
         }
     }
-   @IBInspectable var TextColor : UIColor = .white//文字颜色
-   @IBInspectable var TextFont : UIFont = UIFont.systemFont(ofSize: 14)//文字字体大小
-   @IBInspectable var titleLabelBackgroundColor : UIColor = .init(red: 0, green: 0, blue: 0, alpha: 0.2)//label背景颜色
-   @IBInspectable var titleLabelHeight : CGFloat = 30//label高度,默认30
-   @IBInspectable var TextAlignment : NSTextAlignment = NSTextAlignment.left//文字默认居左
-   @IBInspectable var backgroundImageView : UIImageView?//背景图片,用来显示占位图
-   @IBInspectable var titleNumberOfLine = 1 // 文字行数,默认一行
-   @IBInspectable var imageViewContentMode : UIViewContentMode = UIViewContentMode.scaleToFill //图片填充样式,默认fill
+    @IBInspectable open var TextColor : UIColor = .white//文字颜色
+    @IBInspectable open var TextFont : UIFont = UIFont.systemFont(ofSize: 14)//文字字体大小
+    @IBInspectable open var titleLabelBackgroundColor : UIColor = .init(red: 0, green: 0, blue: 0, alpha: 0.2)//label背景颜色
+    @IBInspectable open var titleLabelHeight : CGFloat = 30//label高度,默认30
+    @IBInspectable open var TextAlignment : NSTextAlignment = NSTextAlignment.left//文字默认居左
+    @IBInspectable open var backgroundImageView : UIImageView?//背景图片,用来显示占位图
+    @IBInspectable open var titleNumberOfLine = 1 // 文字行数,默认一行
+    @IBInspectable open var imageViewContentMode : UIViewContentMode = UIViewContentMode.scaleToFill //图片填充样式,默认fill
     var padding : CGFloat = 8 {
         didSet {
             if pageControl is CHIBasePageControl {
@@ -97,28 +97,28 @@ class SBCycleScrollView: UIView,UICollectionViewDelegate,UICollectionViewDataSou
         return control
     }()
     private var timer : Timer!
-    var scrollDirection : UICollectionViewScrollDirection = UICollectionViewScrollDirection.horizontal{
+    open var scrollDirection : UICollectionViewScrollDirection = UICollectionViewScrollDirection.horizontal{
         didSet{
             flowLayout.scrollDirection = scrollDirection
         }
     }
-        //滚动方向,默认横向滑动
-    var ScrollTimeInterval : CGFloat = 2.0//滑动间隔时间
-   
+    //滚动方向,默认横向滑动
+    open var ScrollTimeInterval : CGFloat = 2.0//滑动间隔时间
+    
     //MARK:数据源相关
-    var titlesGroup = [String]() //标题数组
+    open var titlesGroup = [String]() //标题数组
     var delegate : SBCycleScrollViewDelegate?
-    var imageURLStringsGroup = [String](){ //设置网络图片地址数组,并刷新Collectionview
+    open var imageURLStringsGroup = [String](){ //设置网络图片地址数组,并刷新Collectionview
         didSet {
             imagePathsGroup = imageURLStringsGroup
         }
     }
-    var ImageNamesGroup = [String](){//设置本地图片名称数组,并刷新Collectionview
+    open var ImageNamesGroup = [String](){//设置本地图片名称数组,并刷新Collectionview
         didSet {
             imagePathsGroup = ImageNamesGroup
         }
     }
-    var imagePathsGroup = [String](){
+    open var imagePathsGroup = [String](){
         didSet {
             totalItemsCount = imagePathsGroup.count * 100
             if imagePathsGroup.count > 1 {
@@ -132,7 +132,7 @@ class SBCycleScrollView: UIView,UICollectionViewDelegate,UICollectionViewDataSou
             mainView.reloadData()
         }
     }
-    var placeholderImage : UIImage = UIImage.init() {//展位图
+    open var placeholderImage : UIImage = UIImage.init() {//展位图
         didSet {
             if self.backgroundImageView == nil {
                 self.backgroundImageView = UIImageView.init()
@@ -142,7 +142,7 @@ class SBCycleScrollView: UIView,UICollectionViewDelegate,UICollectionViewDataSou
             }
         }
     }
-
+    
     //MARK:初始化
     /// 初始轮播图（推荐使用）
     ///
@@ -150,7 +150,7 @@ class SBCycleScrollView: UIView,UICollectionViewDelegate,UICollectionViewDataSou
     ///   - frame: frame
     ///   - delegate: 代理
     ///   - placehoder: 展位图
-    static func initScrollView( frame : CGRect, delegate : SBCycleScrollViewDelegate,  placehoder : UIImage) -> SBCycleScrollView {
+    static public func initScrollView( frame : CGRect, delegate : SBCycleScrollViewDelegate,  placehoder : UIImage) -> SBCycleScrollView {
         let cycleScrollView = SBCycleScrollView.init(frame: frame)
         cycleScrollView.delegate = delegate
         cycleScrollView.placeholderImage = placehoder
@@ -161,7 +161,7 @@ class SBCycleScrollView: UIView,UICollectionViewDelegate,UICollectionViewDataSou
     /// - Parameters:
     ///   - frame: frame
     ///   - imageNamesGroup: 图片名称数组
-    static func initScrollView( frame : CGRect, imageNamesGroup : Array<String>!) -> SBCycleScrollView{
+    static public func initScrollView( frame : CGRect, imageNamesGroup : Array<String>!) -> SBCycleScrollView{
         let cycleScrollView = SBCycleScrollView.init(frame: frame)
         cycleScrollView.imagePathsGroup = imageNamesGroup
         if imageNamesGroup.count > 1 {
@@ -177,7 +177,7 @@ class SBCycleScrollView: UIView,UICollectionViewDelegate,UICollectionViewDataSou
     /// - Parameters:
     ///   - frame: frame
     ///   - imageURLsGroup: 网络图片地址数组
-    static func initScrollView( frame : CGRect, imageURLsGroup : Array<String>!) -> SBCycleScrollView {
+    static public func initScrollView( frame : CGRect, imageURLsGroup : Array<String>!) -> SBCycleScrollView {
         let cycleScrollView = SBCycleScrollView.init(frame: frame)
         cycleScrollView.imagePathsGroup = imageURLsGroup
         if imageURLsGroup.count > 1 {
@@ -193,12 +193,12 @@ class SBCycleScrollView: UIView,UICollectionViewDelegate,UICollectionViewDataSou
         setupMainView()
         self.backgroundColor = .lightGray
     }
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         setupMainView()
         self.backgroundColor = .lightGray
     }
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         flowLayout?.itemSize = self.bounds.size
         mainView?.frame = self.bounds
@@ -225,7 +225,7 @@ class SBCycleScrollView: UIView,UICollectionViewDelegate,UICollectionViewDataSou
         pageControl.isHidden = !showPageControl
     }
     
-   private func setupMainView() {
+    private func setupMainView() {
         flowLayout = UICollectionViewFlowLayout.init()
         flowLayout.minimumLineSpacing = 0;
         flowLayout.scrollDirection = scrollDirection
@@ -286,13 +286,13 @@ class SBCycleScrollView: UIView,UICollectionViewDelegate,UICollectionViewDataSou
         return max(0, index);
     }
     
-  
-//MARK: UICollectionViewDelegate,UICollectionViewDataSource代理
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    
+    //MARK: UICollectionViewDelegate,UICollectionViewDataSource代理
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return totalItemsCount
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: ID, for: indexPath) as! SBCollectionViewCell
         let itemIndex = pageControlIndexWithCurrentCellIndex(indexPath.item)
         let imagePath : String = imagePathsGroup[itemIndex]
@@ -325,13 +325,13 @@ class SBCycleScrollView: UIView,UICollectionViewDelegate,UICollectionViewDataSou
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if (self.delegate?.responds(to: #selector(SBCycleScrollViewDelegate.didSelectedCycleScrollView(_:_:))))!{
             delegate?.didSelectedCycleScrollView!(self, pageControlIndexWithCurrentCellIndex(indexPath.item))
         }
     }
     //MARK:UIScrollViewDelegate
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if imagePathsGroup.count == 0 {
             return
         }
@@ -356,16 +356,16 @@ class SBCycleScrollView: UIView,UICollectionViewDelegate,UICollectionViewDataSou
             return
         }
     }
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         invalidateTimer()
     }
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         setupTimer()
     }
- 
+    
     func setupPageControl() {
         
-            pageControl.removeFromSuperview()
+        pageControl.removeFromSuperview()
         
         if imagePathsGroup.count == 0 || isOnlyDisplayText {
             return
@@ -420,7 +420,7 @@ class SBCycleScrollView: UIView,UICollectionViewDelegate,UICollectionViewDataSou
             control.numberOfPages = imagePathsGroup.count
             control.currentPageTintColor = currentPageDotColor
             control.tintColor = pageDotColor
-            control.elementHeight = pageControlDotRadius 
+            control.elementHeight = pageControlDotRadius
             pageControl = control
             self.addSubview(pageControl)
         case .Paprika:
@@ -447,7 +447,7 @@ class SBCycleScrollView: UIView,UICollectionViewDelegate,UICollectionViewDataSou
         return Int(index % self.imagePathsGroup.count)
     }
     //禁用拖拽手势
-    func disableScrollGesture() {
+    open func disableScrollGesture() {
         self.mainView.canCancelContentTouches = false
         for gesture : UIGestureRecognizer in mainView.gestureRecognizers!{
             if gesture.isKind(of: UIPanGestureRecognizer.classForCoder()){
@@ -456,7 +456,7 @@ class SBCycleScrollView: UIView,UICollectionViewDelegate,UICollectionViewDataSou
         }
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
     }
