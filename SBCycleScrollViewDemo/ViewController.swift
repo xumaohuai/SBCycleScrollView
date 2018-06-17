@@ -59,7 +59,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         case 4:
             cell.cycleScrollView.pageControlDotRadius = 10
         case 5:
-            cell.cycleScrollView.titlesGroup = titles;
+            cell.cycleScrollView.titlesGroup = titles
             cell.cycleScrollView.pageControlAliment = SBPageControlAliment.right
         case 6:
             cell.cycleScrollView.titlesGroup = titles;

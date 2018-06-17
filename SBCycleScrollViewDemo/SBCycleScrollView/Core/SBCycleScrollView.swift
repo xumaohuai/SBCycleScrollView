@@ -25,7 +25,7 @@ public enum SBPageControlStyle {
     //MARK: 自定义样式
     /**---------------------------------自定义样式------------------------------------------------*/
     @IBInspectable open var showPageControl : Bool = true//是否显示pageControl,默认显示
-    open  var hidesForSinglePage : Bool = true//只有一页时候是否隐藏pagec,默认隐藏
+    open  var hidesForSinglePage : Bool = true//只有一页时候是否隐藏pagecontrol,默认隐藏
     open var isOnlyDisplayText : Bool = false//只显示文字,默认false
     open  var pageControlAliment : SBPageControlAliment = SBPageControlAliment.center//pageControl位置,默认居中
     open var pageControlStyle : SBPageControlStyle = SBPageControlStyle.Classic{ //pageControl样式,默认系统样式

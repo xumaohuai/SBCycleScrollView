@@ -199,7 +199,7 @@ import UIKit
         fatalError("Should be implemented in child class")
     }
     func sizeForPages(_ pages : NSInteger) -> CGSize {
-        return CGSize.init(width: CGFloat(self.numberOfPages) * (CGFloat(numberOfPages) + radius * 2), height: radius * 6)
+        return CGSize.init(width: CGFloat(self.numberOfPages) * (CGFloat(numberOfPages) + radius * 2), height: radius * 2)
     }
 
 }
