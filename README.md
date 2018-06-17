@@ -82,13 +82,21 @@ func didSelectedCycleScrollView(_ cycleScrollView: SBCycleScrollView, _ Index: N
 在故事版里面,拖入一个UIView,继承SBCycleScrollView,就可以在其属性界面直接修改了.如图:
 ![storyboard属性](https://upload-images.jianshu.io/upload_images/1220329-fe13b7365e5ba009.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 # 效果图展示:
-![
-](https://upload-images.jianshu.io/upload_images/1220329-f2e9b3de1461590e.gif?imageMogr2/auto-orient/strip)
-![](https://upload-images.jianshu.io/upload_images/1220329-4f69527e854a5213.gif?imageMogr2/auto-orient/strip)
-![](https://upload-images.jianshu.io/upload_images/1220329-1667c139562add41.gif?imageMogr2/auto-orient/strip)
-![](https://upload-images.jianshu.io/upload_images/1220329-77270912fdc2d8d4.gif?imageMogr2/auto-orient/strip)
-![](https://upload-images.jianshu.io/upload_images/1220329-cbdad0b6cce8aefe.gif?imageMogr2/auto-orient/strip)
-![](https://upload-images.jianshu.io/upload_images/1220329-44136bed8c1adf8d.gif?imageMogr2/auto-orient/strip)
+![](https://upload-images.jianshu.io/upload_images/1220329-e0a6d0c3e7d41be8.gif?imageMogr2/auto-orient/strip)
+
+![](https://upload-images.jianshu.io/upload_images/1220329-4be3f85fa74e4396.gif?imageMogr2/auto-orient/strip)
+
+![](https://upload-images.jianshu.io/upload_images/1220329-a54812076de12935.gif?imageMogr2/auto-orient/strip)
+
+![](https://upload-images.jianshu.io/upload_images/1220329-509c04f4997380a8.gif?imageMogr2/auto-orient/strip)
+
+![](https://upload-images.jianshu.io/upload_images/1220329-2975a790910e946a.gif?imageMogr2/auto-orient/strip)
+
+![](https://upload-images.jianshu.io/upload_images/1220329-217dad2580cb94e7.gif?imageMogr2/auto-orient/strip)
+
+![](https://upload-images.jianshu.io/upload_images/1220329-d6ec969567d2b455.gif?imageMogr2/auto-orient/strip)
+
+![](https://upload-images.jianshu.io/upload_images/1220329-4b2a8d64f0980082.gif?imageMogr2/auto-orient/strip)
 
 ### 结语
 #### 如果这个组件能够帮助到你我会非常开心,当然我也希望有大佬能够帮我指出我代码中的问题,毕竟我学swift时间不久,代码还有很多不足的地方,如果可以,非常感谢. 
