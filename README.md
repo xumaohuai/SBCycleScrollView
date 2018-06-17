@@ -1,6 +1,7 @@
 # SBCycleScrollView
 ## ☆☆☆ “功能强大的图片、文字轮播器,支持纯文字、网络图片、本地图片、图片加文字以及各种圆点样式” ☆☆☆
-
+![](https://img.shields.io/badge/platform-iOS-red.svg) ![](https://img.shields.io/badge/language-Swift-orange.svg)
+![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)
 ### 支持pod导入
 pod 'SBCycleScrollView','~> 0.0.4'
 
@@ -90,7 +91,7 @@ func didSelectedCycleScrollView(_ cycleScrollView: SBCycleScrollView, _ Index: N
 ![](https://upload-images.jianshu.io/upload_images/1220329-44136bed8c1adf8d.gif?imageMogr2/auto-orient/strip)
 
 ### 结语
-##### 如果这个组件能够帮助到你我会非常开心,当然我也希望有大佬能够帮我指出我代码中的问题,毕竟我学swift时间不久,代码还有很多不足的地方,如果可以,非常感谢. 
+#### 如果这个组件能够帮助到你我会非常开心,当然我也希望有大佬能够帮我指出我代码中的问题,毕竟我学swift时间不久,代码还有很多不足的地方,如果可以,非常感谢. 
 ### 希望大家能给个star,你们的鼓励是我前进的动力.
 
 [Github地址,欢迎star😆](https://github.com/xumaohuai/SBCycleScrollView)
