@@ -27,7 +27,6 @@
 		4655B49920D54AE00010E50D /* CHIPageControlPaprika.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655B48B20D54AE00010E50D /* CHIPageControlPaprika.swift */; };
 		4655B49A20D54AE00010E50D /* CHIPageControlAji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655B48C20D54AE00010E50D /* CHIPageControlAji.swift */; };
 		4655B49B20D54AE00010E50D /* CHILayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655B48D20D54AE00010E50D /* CHILayer.swift */; };
-		4655B49C20D54AE00010E50D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4655B48E20D54AE00010E50D /* Info.plist */; };
 		4655B4A220D54B090010E50D /* place.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4655B49D20D54B090010E50D /* place.jpg */; };
 		4655B4A320D54B090010E50D /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4655B49E20D54B090010E50D /* 1.jpg */; };
 		4655B4A420D54B090010E50D /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4655B49F20D54B090010E50D /* 2.jpg */; };
@@ -70,7 +69,6 @@
 		4655B47F20D54AE00010E50D /* SBCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBCollectionViewCell.swift; sourceTree = "<group>"; };
 		4655B48020D54AE00010E50D /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		4655B48120D54AE00010E50D /* SBCycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBCycleScrollView.swift; sourceTree = "<group>"; };
-		4655B48320D54AE00010E50D /* CHIPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHIPageControl.h; sourceTree = "<group>"; };
 		4655B48420D54AE00010E50D /* CHIBasePageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIBasePageControl.swift; sourceTree = "<group>"; };
 		4655B48520D54AE00010E50D /* CHIPageControlJalapeno.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlJalapeno.swift; sourceTree = "<group>"; };
 		4655B48620D54AE00010E50D /* CHIPageControlAleppo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlAleppo.swift; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 		4655B48B20D54AE00010E50D /* CHIPageControlPaprika.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlPaprika.swift; sourceTree = "<group>"; };
 		4655B48C20D54AE00010E50D /* CHIPageControlAji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlAji.swift; sourceTree = "<group>"; };
 		4655B48D20D54AE00010E50D /* CHILayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHILayer.swift; sourceTree = "<group>"; };
-		4655B48E20D54AE00010E50D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4655B49D20D54B090010E50D /* place.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = place.jpg; sourceTree = "<group>"; };
 		4655B49E20D54B090010E50D /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		4655B49F20D54B090010E50D /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
@@ -199,7 +196,6 @@
 		4655B48220D54AE00010E50D /* CHIPageControl */ = {
 			isa = PBXGroup;
 			children = (
-				4655B48320D54AE00010E50D /* CHIPageControl.h */,
 				4655B48420D54AE00010E50D /* CHIBasePageControl.swift */,
 				4655B48520D54AE00010E50D /* CHIPageControlJalapeno.swift */,
 				4655B48620D54AE00010E50D /* CHIPageControlAleppo.swift */,
@@ -210,7 +206,6 @@
 				4655B48B20D54AE00010E50D /* CHIPageControlPaprika.swift */,
 				4655B48C20D54AE00010E50D /* CHIPageControlAji.swift */,
 				4655B48D20D54AE00010E50D /* CHILayer.swift */,
-				4655B48E20D54AE00010E50D /* Info.plist */,
 			);
 			path = CHIPageControl;
 			sourceTree = "<group>";
@@ -338,7 +333,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4655B49C20D54AE00010E50D /* Info.plist in Resources */,
 				4655B45A20D54A390010E50D /* LaunchScreen.storyboard in Resources */,
 				4655B4A420D54B090010E50D /* 2.jpg in Resources */,
 				4655B4A220D54B090010E50D /* place.jpg in Resources */,

@@ -79,7 +79,8 @@ public enum SBPageControlStyle {
     @IBInspectable open var backgroundImageView : UIImageView?//背景图片,用来显示占位图
     @IBInspectable open var titleNumberOfLine = 1 // 文字行数,默认一行
     @IBInspectable open var imageViewContentMode : UIViewContentMode = UIViewContentMode.scaleToFill //图片填充样式,默认fill
-    var padding : CGFloat = 8 {
+    //pagecontol间距
+    open var padding : CGFloat = 7 {
         didSet {
             if pageControl is CHIBasePageControl {
                 let con = pageControl as? CHIBasePageControl
@@ -326,7 +327,7 @@ public enum SBPageControlStyle {
     }
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if (self.delegate?.responds(to: #selector(SBCycleScrollViewDelegate.didSelectedCycleScrollView(_:_:))))!{
+        if self.delegate != nil && (self.delegate?.responds(to: #selector(SBCycleScrollViewDelegate.didSelectedCycleScrollView(_:_:))))!{
             delegate?.didSelectedCycleScrollView!(self, pageControlIndexWithCurrentCellIndex(indexPath.item))
         }
     }

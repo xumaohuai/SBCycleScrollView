@@ -10,7 +10,9 @@ import UIKit
 
 class DemoCell: UITableViewCell,SBCycleScrollViewDelegate {
     lazy var cycleScrollView : SBCycleScrollView =  {
-        SBCycleScrollView.initScrollView(frame: self.bounds, delegate: self, placehoder: UIImage.init(named: "place.jpg")!)
+//        SBCycleScrollView.initScrollView(frame: self.bounds, delegate: self, placehoder: UIImage.init(named: "place.jpg")!)
+        SBCycleScrollView.initScrollView(frame: self.bounds, imageURLsGroup: [])
+        
     }()
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
@@ -20,6 +22,7 @@ class DemoCell: UITableViewCell,SBCycleScrollViewDelegate {
     override func layoutSubviews() {
         super.layoutSubviews()
         cycleScrollView.frame = self.bounds
+        cycleScrollView.delegate = self
         
     }
     //MARK:SBCycleScrollViewDelegate

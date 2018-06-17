@@ -47,7 +47,7 @@ import UIKit
     }
     
     
-    @IBInspectable open var padding: CGFloat = 5 {
+    @IBInspectable open var padding: CGFloat = 7 {
         didSet {
             setNeedsLayout()
             update(for: progress)
@@ -61,7 +61,7 @@ import UIKit
         }
     }
     
-    @IBInspectable open var inactiveTransparency: CGFloat = 0.5 {
+    @IBInspectable open var inactiveTransparency: CGFloat = 1 {
         didSet {
             setNeedsLayout()
             update(for: progress)
