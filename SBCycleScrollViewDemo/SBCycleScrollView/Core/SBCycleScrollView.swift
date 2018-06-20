@@ -98,13 +98,14 @@ public enum SBPageControlStyle {
         return control
     }()
     private var timer : Timer!
+    //滚动方向,默认横向滑动
     open var scrollDirection : UICollectionViewScrollDirection = UICollectionViewScrollDirection.horizontal{
         didSet{
             flowLayout.scrollDirection = scrollDirection
         }
     }
-    //滚动方向,默认横向滑动
-    open var ScrollTimeInterval : CGFloat = 2.0//滑动间隔时间
+    //滑动间隔时间
+    open var ScrollTimeInterval : CGFloat = 2.0
     
     //MARK:数据源相关
     open var titlesGroup = [String]() //标题数组
@@ -123,10 +124,10 @@ public enum SBPageControlStyle {
         didSet {
             totalItemsCount = imagePathsGroup.count * 100
             if imagePathsGroup.count > 1 {
-                self.mainView.isScrollEnabled = true
+                mainView.isScrollEnabled = true
                 setupTimer()
             }else {
-                self.mainView.isScrollEnabled = false
+                mainView.isScrollEnabled = false
                 invalidateTimer()
             }
             setupPageControl()
@@ -135,11 +136,11 @@ public enum SBPageControlStyle {
     }
     open var placeholderImage : UIImage = UIImage.init() {//展位图
         didSet {
-            if self.backgroundImageView == nil {
-                self.backgroundImageView = UIImageView.init()
-                self.backgroundImageView?.contentMode = UIViewContentMode.scaleToFill
-                self.insertSubview(self.backgroundImageView!, belowSubview: mainView!)
-                self.backgroundImageView?.image = placeholderImage
+            if backgroundImageView == nil {
+                backgroundImageView = UIImageView.init()
+                backgroundImageView?.contentMode = UIViewContentMode.scaleToFill
+                insertSubview(backgroundImageView!, belowSubview: mainView!)
+                backgroundImageView?.image = placeholderImage
             }
         }
     }
@@ -192,18 +193,18 @@ public enum SBPageControlStyle {
     override init(frame: CGRect) {
         super .init(frame: frame)
         setupMainView()
-        self.backgroundColor = .lightGray
+        backgroundColor = .lightGray
     }
     override open func awakeFromNib() {
         super.awakeFromNib()
         setupMainView()
-        self.backgroundColor = .lightGray
+        backgroundColor = .lightGray
     }
     override open func layoutSubviews() {
         super.layoutSubviews()
-        flowLayout?.itemSize = self.bounds.size
-        mainView?.frame = self.bounds
-        if mainView?.contentOffset.x == 0 && self.totalItemsCount > 0 {
+        flowLayout?.itemSize = bounds.size
+        mainView?.frame = bounds
+        if mainView?.contentOffset.x == 0 && totalItemsCount > 0 {
             let targetIndex = Int(totalItemsCount / 2)
             mainView?.scrollToItem(at: IndexPath.init(row: targetIndex, section: 0), at: UICollectionViewScrollPosition.left, animated: false)
         }
@@ -214,11 +215,11 @@ public enum SBPageControlStyle {
         }else{
             size = CGSize.init(width: CGFloat(imagePathsGroup.count * 2) * pageControlDotRadius , height: pageControlDotRadius * 2)
         }
-        var x = (self.mainView.width - size.width) / 2
+        var x = (mainView.width - size.width) / 2
         if pageControlAliment == SBPageControlAliment.right{
-            x = self.width - size.width - 10
+            x = width - size.width - 10
         }
-        let y = self.mainView.height - size.height - 10
+        let y = mainView.height - size.height - 10
         var pageControlFrame = CGRect.init(x: x, y: y, width: size.width, height: size.height)
         pageControlFrame.origin.y -= pageControlBottomOffset
         pageControlFrame.origin.x -= pageControlRightOffset
@@ -231,7 +232,7 @@ public enum SBPageControlStyle {
         flowLayout.minimumLineSpacing = 0;
         flowLayout.scrollDirection = scrollDirection
         
-        mainView = UICollectionView.init(frame: self.bounds, collectionViewLayout: flowLayout!)
+        mainView = UICollectionView.init(frame: bounds, collectionViewLayout: flowLayout!)
         mainView.backgroundColor = .clear
         mainView.isPagingEnabled = true
         mainView.showsVerticalScrollIndicator = false
@@ -240,7 +241,7 @@ public enum SBPageControlStyle {
         mainView.dataSource = self
         mainView.delegate = self
         mainView.scrollsToTop = false
-        self.addSubview(mainView!)
+        addSubview(mainView!)
     }
     func invalidateTimer() {
         timer?.invalidate()
@@ -248,7 +249,7 @@ public enum SBPageControlStyle {
     }
     func setupTimer() {
         invalidateTimer()
-        timer = Timer.scheduledTimer(timeInterval: TimeInterval(self.ScrollTimeInterval), target: self, selector: #selector(automaticScroll), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: TimeInterval(ScrollTimeInterval), target: self, selector: #selector(automaticScroll), userInfo: nil, repeats: true)
         RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
     }
     @objc func automaticScroll()  {
@@ -327,7 +328,7 @@ public enum SBPageControlStyle {
     }
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if self.delegate != nil && (self.delegate?.responds(to: #selector(SBCycleScrollViewDelegate.didSelectedCycleScrollView(_:_:))))!{
+        if delegate != nil && (delegate?.responds(to: #selector(SBCycleScrollViewDelegate.didSelectedCycleScrollView(_:_:))))!{
             delegate?.didSelectedCycleScrollView!(self, pageControlIndexWithCurrentCellIndex(indexPath.item))
         }
     }
@@ -345,7 +346,7 @@ public enum SBPageControlStyle {
             offset = scrollView.contentOffset.y.truncatingRemainder(dividingBy:(scrollView.bounds.height * (CGFloat)(imagePathsGroup.count)))
         }
         let percent = Double(offset / total)
-        let progress = percent * Double(self.imagePathsGroup.count - 1)
+        let progress = percent * Double(imagePathsGroup.count - 1)
         switch pageControl {
         case is UIPageControl:
             let con = pageControl as! UIPageControl
@@ -384,7 +385,7 @@ public enum SBPageControlStyle {
             control.currentPage = indexOnPageControl
             control.transform = CGAffineTransform.init(scaleX: pageControlDotRadius / 5, y: pageControlDotRadius / 5)
             pageControl = control
-            self.addSubview(pageControl)
+            addSubview(pageControl)
         case .Jalapeno:
             let control : CHIPageControlJalapeno = CHIPageControlJalapeno.init(frame: .init(x: 100, y: 100, width: 100, height: 30))
             control.numberOfPages = imagePathsGroup.count
@@ -392,7 +393,7 @@ public enum SBPageControlStyle {
             control.tintColor = pageDotColor
             control.radius = pageControlDotRadius
             pageControl = control
-            self.addSubview(pageControl)
+            addSubview(pageControl)
         case .Aji:
             let control : CHIPageControlAji = CHIPageControlAji.init(frame: .init(x: 100, y: 100, width: 100, height: 30))
             control.numberOfPages = imagePathsGroup.count
@@ -400,7 +401,7 @@ public enum SBPageControlStyle {
             control.tintColor = pageDotColor
             control.radius = pageControlDotRadius
             pageControl = control
-            self.addSubview(pageControl)
+            addSubview(pageControl)
         case .Aleppo:
             let control : CHIPageControlAleppo = CHIPageControlAleppo.init(frame: .init(x: 100, y: 100, width: 100, height: 30))
             control.numberOfPages = imagePathsGroup.count
@@ -408,14 +409,14 @@ public enum SBPageControlStyle {
             control.tintColor = pageDotColor
             control.radius = pageControlDotRadius
             pageControl = control
-            self.addSubview(pageControl)
+            addSubview(pageControl)
         case .Chimayo:
             let control : CHIPageControlChimayo = CHIPageControlChimayo.init(frame: .init(x: 100, y: 100, width: 100, height: 30))
             control.numberOfPages = imagePathsGroup.count
             control.tintColor = currentPageDotColor
             control.radius = pageControlDotRadius
             pageControl = control
-            self.addSubview(pageControl)
+            addSubview(pageControl)
         case .Jaloro:
             let control : CHIPageControlJaloro = CHIPageControlJaloro.init(frame: .init(x: 100, y: 100, width: 100, height: 30))
             control.numberOfPages = imagePathsGroup.count
@@ -423,7 +424,7 @@ public enum SBPageControlStyle {
             control.tintColor = pageDotColor
             control.elementHeight = pageControlDotRadius
             pageControl = control
-            self.addSubview(pageControl)
+            addSubview(pageControl)
         case .Paprika:
             let control : CHIPageControlPaprika = CHIPageControlPaprika.init(frame: .init(x: 100, y: 100, width: 100, height: 30))
             control.numberOfPages = imagePathsGroup.count
@@ -431,7 +432,7 @@ public enum SBPageControlStyle {
             control.tintColor = pageDotColor
             control.radius = pageControlDotRadius
             pageControl = control
-            self.addSubview(pageControl)
+            addSubview(pageControl)
         case .Puya:
             let control : CHIPageControlPuya = CHIPageControlPuya.init(frame: .init(x: 100, y: 100, width: 100, height: 30))
             control.numberOfPages = imagePathsGroup.count
@@ -439,17 +440,17 @@ public enum SBPageControlStyle {
             control.tintColor = pageDotColor
             control.radius = pageControlDotRadius
             pageControl = control
-            self.addSubview(pageControl)
+            addSubview(pageControl)
         }
     }
     
     //MARK:SBCycleScrollViewDelegate
     func pageControlIndexWithCurrentCellIndex(_ index : NSInteger) -> Int {
-        return Int(index % self.imagePathsGroup.count)
+        return Int(index % imagePathsGroup.count)
     }
     //禁用拖拽手势
     open func disableScrollGesture() {
-        self.mainView.canCancelContentTouches = false
+        mainView.canCancelContentTouches = false
         for gesture : UIGestureRecognizer in mainView.gestureRecognizers!{
             if gesture.isKind(of: UIPanGestureRecognizer.classForCoder()){
                 mainView.removeGestureRecognizer(gesture)
