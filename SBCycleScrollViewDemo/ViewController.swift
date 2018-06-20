@@ -16,7 +16,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     let titles = ["https://github.com/","有问题可以联系我","我的qq:1005834829","简书博客搜索:徐老茂"]
     let localImages = ["1.jpg","2.jpg","3.jpg"]
     lazy var tableView : UITableView = {
-        let tableView = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.width, height: self.view.height - 64), style: UITableViewStyle.plain)
+        let tableView = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: view.width, height: view.height - 64), style: UITableViewStyle.plain)
         tableView.register(DemoCell.classForCoder(), forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
@@ -114,9 +114,9 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.isTranslucent = false
         view.addSubview(tableView)
-        self.title = "SBCycleScrollView"
+        title = "SBCycleScrollView"
     }
     
     
