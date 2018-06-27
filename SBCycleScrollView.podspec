@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
   s.source_files = "SBCycleScrollView","SBCycleScrollView/**/*.{swift}"
   s.dependency 'Kingfisher', '~> 4.8.0'
   s.requires_arc = true	 
-
+  s.swift_version = '4.0'
 
 end
