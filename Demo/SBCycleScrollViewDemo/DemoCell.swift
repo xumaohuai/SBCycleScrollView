@@ -10,7 +10,7 @@ import UIKit
 
 class DemoCell: UITableViewCell,CycleScrollViewDelegate {
     lazy var cycleScrollView : CycleScrollView =  {
-        CycleScrollView.initScrollView(frame: self.bounds, delegate: self, placehoder: UIImage.init(named: "place.png"), cycleOptions: CycleOptions())
+        CycleScrollView.initScrollView(frame: self.bounds, delegate: self, placehoder: UIImage.init(named: "place.png"), cycleOption: CycleOption())
         
     }()
     

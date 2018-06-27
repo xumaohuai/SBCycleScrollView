@@ -15,7 +15,7 @@ public enum PageControlAliment {
     case center,right
 }
 
-public struct CycleOptions {
+public struct CycleOption {
     public  var scrollDirection:UICollectionViewScrollDirection = UICollectionViewScrollDirection.horizontal
     public  var showPageControl: Bool = true//是否显示pageControl,默认显示
     public  var isOnlyDisplayText: Bool = false//只显示文字,默认false

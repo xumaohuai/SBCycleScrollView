@@ -16,9 +16,9 @@ import Kingfisher
 
  open class CycleScrollView: UIView,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate {
     private let ID = "CycleScrollViewCell"
-    var options : CycleOptions = CycleOptions(){
+    var option : CycleOption = CycleOption(){
         didSet {
-            flowLayout.scrollDirection = options.scrollDirection
+            flowLayout.scrollDirection = option.scrollDirection
             setupPageControl()
         }
     }
@@ -72,22 +72,22 @@ import Kingfisher
         }
     }
     
-    static public func initScrollView( frame: CGRect, delegate: CycleScrollViewDelegate?, placehoder: UIImage?,cycleOptions: CycleOptions?) -> CycleScrollView {
-        return CycleScrollView.initScrollView(frame: frame, imageURLsGroup: nil, imageNamesGroup: nil, cycleOptions: cycleOptions, titleGroups: nil, delegate: delegate, placehoder: placehoder)
+    static public func initScrollView( frame: CGRect, delegate: CycleScrollViewDelegate?, placehoder: UIImage?,cycleOption: CycleOption?) -> CycleScrollView {
+        return CycleScrollView.initScrollView(frame: frame, imageURLsGroup: nil, imageNamesGroup: nil, cycleOption: cycleOption, titleGroups: nil, delegate: delegate, placehoder: placehoder)
     }
 
-    static public func initScrollView( frame: CGRect, imageNamesGroup: Array<String>?,cycleOptions: CycleOptions?) -> CycleScrollView{
-        return CycleScrollView.initScrollView(frame: frame, imageURLsGroup: nil, imageNamesGroup: imageNamesGroup, cycleOptions: cycleOptions, titleGroups: nil, delegate: nil, placehoder: nil)
+    static public func initScrollView( frame: CGRect, imageNamesGroup: Array<String>?,cycleOption: CycleOption?) -> CycleScrollView{
+        return CycleScrollView.initScrollView(frame: frame, imageURLsGroup: nil, imageNamesGroup: imageNamesGroup, cycleOption: cycleOption, titleGroups: nil, delegate: nil, placehoder: nil)
     }
 
-    static public func initScrollView( frame : CGRect, imageURLsGroup : Array<String>?, cycleOption: CycleOptions?) -> CycleScrollView {
-        return CycleScrollView.initScrollView(frame: frame, imageURLsGroup: imageURLsGroup, imageNamesGroup: nil, cycleOptions: cycleOption, titleGroups: nil, delegate: nil, placehoder: nil)
+    static public func initScrollView( frame : CGRect, imageURLsGroup : Array<String>?, cycleOption: CycleOption?) -> CycleScrollView {
+        return CycleScrollView.initScrollView(frame: frame, imageURLsGroup: imageURLsGroup, imageNamesGroup: nil, cycleOption: cycleOption, titleGroups: nil, delegate: nil, placehoder: nil)
     }
-    static public func initScrollView( frame : CGRect, titleGroup : Array<String>?, cycleOption: CycleOptions?) -> CycleScrollView {
-        return CycleScrollView.initScrollView(frame: frame, imageURLsGroup: nil, imageNamesGroup: nil, cycleOptions: cycleOption, titleGroups: titleGroup, delegate: nil, placehoder: nil)
+    static public func initScrollView( frame : CGRect, titleGroup : Array<String>?, cycleOption: CycleOption?) -> CycleScrollView {
+        return CycleScrollView.initScrollView(frame: frame, imageURLsGroup: nil, imageNamesGroup: nil, cycleOption: cycleOption, titleGroups: titleGroup, delegate: nil, placehoder: nil)
     }
     
-    static private func initScrollView(frame: CGRect, imageURLsGroup: Array<String>?,imageNamesGroup: Array<String>?,cycleOptions: CycleOptions?,titleGroups: Array<String>?,delegate : CycleScrollViewDelegate?,  placehoder : UIImage?) -> CycleScrollView{
+    static private func initScrollView(frame: CGRect, imageURLsGroup: Array<String>?,imageNamesGroup: Array<String>?,cycleOption: CycleOption?,titleGroups: Array<String>?,delegate : CycleScrollViewDelegate?,  placehoder : UIImage?) -> CycleScrollView{
         let cycleScrollView = CycleScrollView.init(frame: frame)
         if imageURLsGroup != nil {
             cycleScrollView.imageURLStringsGroup = imageURLsGroup!
@@ -113,10 +113,10 @@ import Kingfisher
                 cycleScrollView.invalidateTimer()
             }
         }
-        if cycleOptions != nil {
-            cycleScrollView.options = cycleOptions!
+        if cycleOption != nil {
+            cycleScrollView.option = cycleOption!
         }else{
-            cycleScrollView.options = CycleOptions()
+            cycleScrollView.option = CycleOption()
         }
         if delegate != nil {
             cycleScrollView.delegate = delegate!
@@ -150,18 +150,18 @@ import Kingfisher
             let con = pageControl as! CHIBasePageControl
             size = con.sizeForPages(imageNamesGroup.count)
         }else{
-            size = CGSize.init(width: CGFloat(imagePathsGroup.count * 2) * options.radius , height: options.radius * 2)
+            size = CGSize.init(width: CGFloat(imagePathsGroup.count * 2) * option.radius , height: option.radius * 2)
         }
         var x = (mainView.width - size.width) / 2
-        if options.pageAliment == PageControlAliment.right{
+        if option.pageAliment == PageControlAliment.right{
             x = width - size.width - 10
         }
         let y = mainView.height - size.height - 10
         var pageControlFrame = CGRect.init(x: x, y: y, width: size.width, height: size.height)
-        pageControlFrame.origin.y -= options.bottomOffset
-        pageControlFrame.origin.x -= options.rightOffset
+        pageControlFrame.origin.y -= option.bottomOffset
+        pageControlFrame.origin.x -= option.rightOffset
         pageControl.frame = pageControlFrame
-        pageControl.isHidden = !options.showPageControl
+        pageControl.isHidden = !option.showPageControl
     }
     
     func pageControlIndexWithCurrentCellIndex(_ index : NSInteger) -> Int {
@@ -171,7 +171,7 @@ import Kingfisher
     private func setupMainView() {
         flowLayout = UICollectionViewFlowLayout.init()
         flowLayout.minimumLineSpacing = 0;
-        flowLayout.scrollDirection = options.scrollDirection
+        flowLayout.scrollDirection = option.scrollDirection
         mainView = UICollectionView.init(frame: bounds, collectionViewLayout: flowLayout!)
         mainView.backgroundColor = .clear
         mainView.isPagingEnabled = true
@@ -189,7 +189,7 @@ import Kingfisher
     }
     func setupTimer() {
         invalidateTimer()
-        timer = Timer.scheduledTimer(timeInterval: TimeInterval(options.scrollTimeInterval), target: self, selector: #selector(automaticScroll), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: TimeInterval(option.scrollTimeInterval), target: self, selector: #selector(automaticScroll), userInfo: nil, repeats: true)
         RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
     }
     @objc func automaticScroll()  {
@@ -203,13 +203,13 @@ import Kingfisher
     func scrollToIndex(_ index : inout Int) {
         if index >= totalItemsCount {
             index = totalItemsCount / 2
-            if options.scrollDirection == UICollectionViewScrollDirection.horizontal {
+            if option.scrollDirection == UICollectionViewScrollDirection.horizontal {
                 mainView.scrollToItem(at: IndexPath.init(row: index, section: 0) , at: UICollectionViewScrollPosition.left, animated: false)
             }else {
                 mainView.scrollToItem(at: IndexPath.init(row: index, section: 0) , at: UICollectionViewScrollPosition.top, animated: false)
             }
         }
-        if options.scrollDirection == UICollectionViewScrollDirection.horizontal {
+        if option.scrollDirection == UICollectionViewScrollDirection.horizontal {
             mainView.scrollToItem(at: IndexPath.init(row: index, section: 0) , at: UICollectionViewScrollPosition.left, animated: true)
         }else {
             mainView.scrollToItem(at: IndexPath.init(row: index, section: 0) , at: UICollectionViewScrollPosition.top, animated: true)
@@ -229,83 +229,83 @@ import Kingfisher
     }
     func setupPageControl() {
         pageControl.removeFromSuperview()
-        if imagePathsGroup.count == 0 || options.isOnlyDisplayText {
+        if imagePathsGroup.count == 0 || option.isOnlyDisplayText {
             return
         }
         if imagePathsGroup.count == 1{
             return
         }
         let indexOnPageControl = pageControlIndexWithCurrentCellIndex(currentIndex())
-        switch options.pageStyle {
+        switch option.pageStyle {
         case .classic:
             let control : UIPageControl  = UIPageControl.init(frame: .init(x: 100, y: 100, width: 100, height: 30))
             control.numberOfPages = imagePathsGroup.count
-            control.currentPageIndicatorTintColor = options.currentPageDotColor
-            control.pageIndicatorTintColor = options.pageDotColor
+            control.currentPageIndicatorTintColor = option.currentPageDotColor
+            control.pageIndicatorTintColor = option.pageDotColor
             control.currentPage = indexOnPageControl
-            control.transform = CGAffineTransform.init(scaleX: options.radius / 5, y: options.radius / 5)
+            control.transform = CGAffineTransform.init(scaleX: option.radius / 5, y: option.radius / 5)
             pageControl = control
             addSubview(pageControl)
         case .jalapeno:
             let control : CHIPageControlJalapeno = CHIPageControlJalapeno.init(frame: .init(x: 100, y: 100, width: 100, height: 30))
             control.numberOfPages = imagePathsGroup.count
-            control.currentPageTintColor = options.currentPageDotColor
-            control.tintColor = options.pageDotColor
-            control.radius = options.radius
-            control.padding = options.padding
+            control.currentPageTintColor = option.currentPageDotColor
+            control.tintColor = option.pageDotColor
+            control.radius = option.radius
+            control.padding = option.padding
             pageControl = control
             addSubview(pageControl)
         case .aji:
             let control : CHIPageControlAji = CHIPageControlAji.init(frame: .init(x: 100, y: 100, width: 100, height: 30))
             control.numberOfPages = imagePathsGroup.count
-            control.currentPageTintColor = options.currentPageDotColor
-            control.tintColor = options.pageDotColor
-            control.radius = options.radius
-            control.padding = options.padding
+            control.currentPageTintColor = option.currentPageDotColor
+            control.tintColor = option.pageDotColor
+            control.radius = option.radius
+            control.padding = option.padding
             pageControl = control
             addSubview(pageControl)
         case .aleppo:
             let control : CHIPageControlAleppo = CHIPageControlAleppo.init(frame: .init(x: 100, y: 100, width: 100, height: 30))
             control.numberOfPages = imagePathsGroup.count
-            control.currentPageTintColor = options.currentPageDotColor
-            control.tintColor = options.pageDotColor
-            control.radius = options.radius
-            control.padding = options.padding
+            control.currentPageTintColor = option.currentPageDotColor
+            control.tintColor = option.pageDotColor
+            control.radius = option.radius
+            control.padding = option.padding
             pageControl = control
             addSubview(pageControl)
         case .chimayo:
             let control : CHIPageControlChimayo = CHIPageControlChimayo.init(frame: .init(x: 100, y: 100, width: 100, height: 30))
             control.numberOfPages = imagePathsGroup.count
-            control.tintColor = options.currentPageDotColor
-            control.radius = options.radius
-            control.padding = options.padding
+            control.tintColor = option.currentPageDotColor
+            control.radius = option.radius
+            control.padding = option.padding
             pageControl = control
             addSubview(pageControl)
         case .jaloro:
             let control : CHIPageControlJaloro = CHIPageControlJaloro.init(frame: .init(x: 100, y: 100, width: 100, height: 30))
             control.numberOfPages = imagePathsGroup.count
-            control.currentPageTintColor = options.currentPageDotColor
-            control.tintColor = options.pageDotColor
-            control.elementHeight = options.radius
-            control.padding = options.padding
+            control.currentPageTintColor = option.currentPageDotColor
+            control.tintColor = option.pageDotColor
+            control.elementHeight = option.radius
+            control.padding = option.padding
             pageControl = control
             addSubview(pageControl)
         case .paprika:
             let control : CHIPageControlPaprika = CHIPageControlPaprika.init(frame: .init(x: 100, y: 100, width: 100, height: 30))
             control.numberOfPages = imagePathsGroup.count
-            control.currentPageTintColor = options.currentPageDotColor
-            control.tintColor = options.pageDotColor
-            control.radius = options.radius
-            control.padding = options.padding
+            control.currentPageTintColor = option.currentPageDotColor
+            control.tintColor = option.pageDotColor
+            control.radius = option.radius
+            control.padding = option.padding
             pageControl = control
             addSubview(pageControl)
         case .puya:
             let control : CHIPageControlPuya = CHIPageControlPuya.init(frame: .init(x: 100, y: 100, width: 100, height: 30))
             control.numberOfPages = imagePathsGroup.count
-            control.currentPageTintColor = options.currentPageDotColor
-            control.tintColor = options.pageDotColor
-            control.radius = options.radius
-            control.padding = options.padding
+            control.currentPageTintColor = option.currentPageDotColor
+            control.tintColor = option.pageDotColor
+            control.radius = option.radius
+            control.padding = option.padding
             pageControl = control
             addSubview(pageControl)
         }
@@ -338,7 +338,7 @@ extension CycleScrollView{
         let indexOnPageControl = pageControlIndexWithCurrentCellIndex(itemIndex)
         var total =  CGFloat(imagePathsGroup.count - 1) * scrollView.bounds.width
         var offset = scrollView.contentOffset.x.truncatingRemainder(dividingBy:(scrollView.bounds.width * (CGFloat)(imagePathsGroup.count)))
-        if options.scrollDirection == UICollectionViewScrollDirection.vertical {
+        if option.scrollDirection == UICollectionViewScrollDirection.vertical {
             total = CGFloat(imagePathsGroup.count - 1) * scrollView.bounds.height
             offset = scrollView.contentOffset.y.truncatingRemainder(dividingBy:(scrollView.bounds.height * (CGFloat)(imagePathsGroup.count)))
         }
@@ -373,7 +373,7 @@ extension CycleScrollView{
         let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: ID, for: indexPath) as! CollectionViewCell
         let itemIndex = pageControlIndexWithCurrentCellIndex(indexPath.item)
         let imagePath : String = imagePathsGroup[itemIndex]
-        if  !options.isOnlyDisplayText {
+        if  !option.isOnlyDisplayText {
             if imagePath.hasPrefix("http") {
                 cell.imageView.kf.setImage(with: URL(string: imagePath), placeholder: placeholderImage)
             }else {
@@ -388,16 +388,16 @@ extension CycleScrollView{
             cell.title = titlesGroup[itemIndex]
         }
         if (!cell.isConfigured) {
-            cell.titleLabelBackgroundColor = options.titleLabelBackgroundColor
-            cell.titleLabelHeight = options.titleLabelHeight
-            cell.titleLabelTextAlignment = options.textAlignment
-            cell.titleLabelTextColor = options.textColor
-            cell.titleLabelTextFont = options.textFont
-            cell.imageView.contentMode = options.imageViewMode
+            cell.titleLabelBackgroundColor = option.titleLabelBackgroundColor
+            cell.titleLabelHeight = option.titleLabelHeight
+            cell.titleLabelTextAlignment = option.textAlignment
+            cell.titleLabelTextColor = option.textColor
+            cell.titleLabelTextFont = option.textFont
+            cell.imageView.contentMode = option.imageViewMode
             cell.isConfigured = true
             cell.clipsToBounds = true
-            cell.isOnlyDisplayText = options.isOnlyDisplayText
-            cell.numberOfLine  = options.numberOfline
+            cell.isOnlyDisplayText = option.isOnlyDisplayText
+            cell.numberOfLine  = option.numberOfline
         }
         return cell
     }

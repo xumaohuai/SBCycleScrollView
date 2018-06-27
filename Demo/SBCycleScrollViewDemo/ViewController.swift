@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
+class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource,CycleScrollViewDelegate{
     let descrips = ["网络图片","本地图片","上下滑动","按钮颜色","按钮大小","图片+文字","纯文字","SBPageControlStyle.Aji","SBPageControlStyle.Aleppo","SBPageControlStyle.Chimayo","SBPageControlStyle.Jalapeno","SBPageControlStyle.Jaloro","SBPageControlStyle.Paprika","SBPageControlStyle.Puya"]
     let imageUrls = ["https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3711690120,1162131576&fm=27&gp=0.jpg","https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1274844101,636774309&fm=27&gp=0.jpg","https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1185573334,16415454&fm=27&gp=0.jpg","https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2536078587,1520810066&fm=27&gp=0.jpg"]
     let titles = ["https://github.com/","有问题可以联系我","我的qq:1005834829","简书博客搜索:徐老茂"]
@@ -30,7 +30,6 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         title = "SBCycleScrollView"
         view.addSubview(tableView)
     }
-   
 }
 
 //MARK:UITableViewDelegate,UITableViewDataSource
@@ -57,7 +56,7 @@ extension ViewController{
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = DemoCell.init(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-        var op = CycleOptions()
+        var op = CycleOption()
         cell.cycleScrollView.imageURLStringsGroup = imageUrls
         switch indexPath.section {
         case 1:
@@ -117,7 +116,7 @@ extension ViewController{
             op.pageDotColor = .white
         default: break
         }
-        cell.cycleScrollView.options = op
+        cell.cycleScrollView.option = op
         return cell
     }
 }
