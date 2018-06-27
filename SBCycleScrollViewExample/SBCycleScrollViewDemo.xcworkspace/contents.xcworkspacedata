@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SBCycleScrollViewDemo.xcodeproj">
+      location = "group:/Users/xumaohuai/Documents/SBCycleScrollView/SBCycleScrollViewExample/SBCycleScrollViewExample.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

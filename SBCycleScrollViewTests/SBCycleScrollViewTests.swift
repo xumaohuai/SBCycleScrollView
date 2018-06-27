@@ -1,15 +1,15 @@
 //
-//  SBCycleScrollViewDemoTests.swift
-//  SBCycleScrollViewDemoTests
+//  SBCycleScrollViewTests.swift
+//  SBCycleScrollViewTests
 //
-//  Created by 徐茂怀 on 2018/6/16.
+//  Created by 徐茂怀 on 2018/6/27.
 //  Copyright © 2018年 徐茂怀. All rights reserved.
 //
 
 import XCTest
-@testable import SBCycleScrollViewDemo
+@testable import SBCycleScrollView
 
-class SBCycleScrollViewDemoTests: XCTestCase {
+class SBCycleScrollViewTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

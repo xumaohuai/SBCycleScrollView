@@ -7,27 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46120D9120E33275009B90C6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120D8220E33275009B90C6 /* UIView+Extension.swift */; };
-		46120D9220E33275009B90C6 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120D8320E33275009B90C6 /* CollectionViewCell.swift */; };
-		46120D9320E33275009B90C6 /* CycleScrollOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120D8420E33275009B90C6 /* CycleScrollOptions.swift */; };
-		46120D9420E33275009B90C6 /* CycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120D8520E33275009B90C6 /* CycleScrollView.swift */; };
-		46120D9520E33275009B90C6 /* CHIBasePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120D8720E33275009B90C6 /* CHIBasePageControl.swift */; };
-		46120D9620E33275009B90C6 /* CHIPageControlJalapeno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120D8820E33275009B90C6 /* CHIPageControlJalapeno.swift */; };
-		46120D9720E33275009B90C6 /* CHIPageControlAleppo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120D8920E33275009B90C6 /* CHIPageControlAleppo.swift */; };
-		46120D9820E33275009B90C6 /* CHIPageControlJaloro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120D8A20E33275009B90C6 /* CHIPageControlJaloro.swift */; };
-		46120D9920E33275009B90C6 /* CHIPageControlChimayo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120D8B20E33275009B90C6 /* CHIPageControlChimayo.swift */; };
-		46120D9A20E33275009B90C6 /* CHIPageControlPuya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120D8C20E33275009B90C6 /* CHIPageControlPuya.swift */; };
-		46120D9B20E33275009B90C6 /* CHIPageControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120D8D20E33275009B90C6 /* CHIPageControllable.swift */; };
-		46120D9C20E33275009B90C6 /* CHIPageControlPaprika.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120D8E20E33275009B90C6 /* CHIPageControlPaprika.swift */; };
-		46120D9D20E33275009B90C6 /* CHIPageControlAji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120D8F20E33275009B90C6 /* CHIPageControlAji.swift */; };
-		46120D9E20E33275009B90C6 /* CHILayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120D9020E33275009B90C6 /* CHILayer.swift */; };
+		46120DEB20E37B59009B90C6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120DDC20E37B59009B90C6 /* UIView+Extension.swift */; };
+		46120DEC20E37B59009B90C6 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120DDD20E37B59009B90C6 /* CollectionViewCell.swift */; };
+		46120DED20E37B59009B90C6 /* CycleScrollOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120DDE20E37B59009B90C6 /* CycleScrollOptions.swift */; };
+		46120DEE20E37B59009B90C6 /* CycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120DDF20E37B59009B90C6 /* CycleScrollView.swift */; };
+		46120DEF20E37B59009B90C6 /* CHIBasePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120DE120E37B59009B90C6 /* CHIBasePageControl.swift */; };
+		46120DF020E37B59009B90C6 /* CHIPageControlJalapeno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120DE220E37B59009B90C6 /* CHIPageControlJalapeno.swift */; };
+		46120DF120E37B59009B90C6 /* CHIPageControlAleppo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120DE320E37B59009B90C6 /* CHIPageControlAleppo.swift */; };
+		46120DF220E37B59009B90C6 /* CHIPageControlJaloro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120DE420E37B59009B90C6 /* CHIPageControlJaloro.swift */; };
+		46120DF320E37B59009B90C6 /* CHIPageControlChimayo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120DE520E37B59009B90C6 /* CHIPageControlChimayo.swift */; };
+		46120DF420E37B59009B90C6 /* CHIPageControlPuya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120DE620E37B59009B90C6 /* CHIPageControlPuya.swift */; };
+		46120DF520E37B59009B90C6 /* CHIPageControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120DE720E37B59009B90C6 /* CHIPageControllable.swift */; };
+		46120DF620E37B59009B90C6 /* CHIPageControlPaprika.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120DE820E37B59009B90C6 /* CHIPageControlPaprika.swift */; };
+		46120DF720E37B59009B90C6 /* CHIPageControlAji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120DE920E37B59009B90C6 /* CHIPageControlAji.swift */; };
+		46120DF820E37B59009B90C6 /* CHILayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46120DEA20E37B59009B90C6 /* CHILayer.swift */; };
 		4655B45020D54A380010E50D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655B44F20D54A380010E50D /* AppDelegate.swift */; };
 		4655B45220D54A380010E50D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655B45120D54A380010E50D /* ViewController.swift */; };
 		4655B45520D54A380010E50D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4655B45320D54A380010E50D /* Main.storyboard */; };
 		4655B45720D54A390010E50D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4655B45620D54A390010E50D /* Assets.xcassets */; };
 		4655B45A20D54A390010E50D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4655B45820D54A390010E50D /* LaunchScreen.storyboard */; };
-		4655B46520D54A390010E50D /* SBCycleScrollViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655B46420D54A390010E50D /* SBCycleScrollViewDemoTests.swift */; };
-		4655B47020D54A390010E50D /* SBCycleScrollViewDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655B46F20D54A390010E50D /* SBCycleScrollViewDemoUITests.swift */; };
 		4655B4A220D54B090010E50D /* place.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4655B49D20D54B090010E50D /* place.jpg */; };
 		4655B4A320D54B090010E50D /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4655B49E20D54B090010E50D /* 1.jpg */; };
 		4655B4A420D54B090010E50D /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4655B49F20D54B090010E50D /* 2.jpg */; };
@@ -54,33 +52,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		46120D8220E33275009B90C6 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		46120D8320E33275009B90C6 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		46120D8420E33275009B90C6 /* CycleScrollOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleScrollOptions.swift; sourceTree = "<group>"; };
-		46120D8520E33275009B90C6 /* CycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleScrollView.swift; sourceTree = "<group>"; };
-		46120D8720E33275009B90C6 /* CHIBasePageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIBasePageControl.swift; sourceTree = "<group>"; };
-		46120D8820E33275009B90C6 /* CHIPageControlJalapeno.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlJalapeno.swift; sourceTree = "<group>"; };
-		46120D8920E33275009B90C6 /* CHIPageControlAleppo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlAleppo.swift; sourceTree = "<group>"; };
-		46120D8A20E33275009B90C6 /* CHIPageControlJaloro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlJaloro.swift; sourceTree = "<group>"; };
-		46120D8B20E33275009B90C6 /* CHIPageControlChimayo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlChimayo.swift; sourceTree = "<group>"; };
-		46120D8C20E33275009B90C6 /* CHIPageControlPuya.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlPuya.swift; sourceTree = "<group>"; };
-		46120D8D20E33275009B90C6 /* CHIPageControllable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControllable.swift; sourceTree = "<group>"; };
-		46120D8E20E33275009B90C6 /* CHIPageControlPaprika.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlPaprika.swift; sourceTree = "<group>"; };
-		46120D8F20E33275009B90C6 /* CHIPageControlAji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlAji.swift; sourceTree = "<group>"; };
-		46120D9020E33275009B90C6 /* CHILayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHILayer.swift; sourceTree = "<group>"; };
-		4655B44C20D54A380010E50D /* SBCycleScrollViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBCycleScrollViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		46120DDC20E37B59009B90C6 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		46120DDD20E37B59009B90C6 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		46120DDE20E37B59009B90C6 /* CycleScrollOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleScrollOptions.swift; sourceTree = "<group>"; };
+		46120DDF20E37B59009B90C6 /* CycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleScrollView.swift; sourceTree = "<group>"; };
+		46120DE120E37B59009B90C6 /* CHIBasePageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIBasePageControl.swift; sourceTree = "<group>"; };
+		46120DE220E37B59009B90C6 /* CHIPageControlJalapeno.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlJalapeno.swift; sourceTree = "<group>"; };
+		46120DE320E37B59009B90C6 /* CHIPageControlAleppo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlAleppo.swift; sourceTree = "<group>"; };
+		46120DE420E37B59009B90C6 /* CHIPageControlJaloro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlJaloro.swift; sourceTree = "<group>"; };
+		46120DE520E37B59009B90C6 /* CHIPageControlChimayo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlChimayo.swift; sourceTree = "<group>"; };
+		46120DE620E37B59009B90C6 /* CHIPageControlPuya.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlPuya.swift; sourceTree = "<group>"; };
+		46120DE720E37B59009B90C6 /* CHIPageControllable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControllable.swift; sourceTree = "<group>"; };
+		46120DE820E37B59009B90C6 /* CHIPageControlPaprika.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlPaprika.swift; sourceTree = "<group>"; };
+		46120DE920E37B59009B90C6 /* CHIPageControlAji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlAji.swift; sourceTree = "<group>"; };
+		46120DEA20E37B59009B90C6 /* CHILayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHILayer.swift; sourceTree = "<group>"; };
+		4655B44C20D54A380010E50D /* SBCycleScrollViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBCycleScrollViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4655B44F20D54A380010E50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4655B45120D54A380010E50D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4655B45420D54A380010E50D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4655B45620D54A390010E50D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4655B45920D54A390010E50D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4655B45B20D54A390010E50D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4655B46020D54A390010E50D /* SBCycleScrollViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBCycleScrollViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4655B46420D54A390010E50D /* SBCycleScrollViewDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBCycleScrollViewDemoTests.swift; sourceTree = "<group>"; };
-		4655B46620D54A390010E50D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4655B46B20D54A390010E50D /* SBCycleScrollViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBCycleScrollViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4655B46F20D54A390010E50D /* SBCycleScrollViewDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBCycleScrollViewDemoUITests.swift; sourceTree = "<group>"; };
-		4655B47120D54A390010E50D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4655B46020D54A390010E50D /* SBCycleScrollViewExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBCycleScrollViewExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4655B46B20D54A390010E50D /* SBCycleScrollViewExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBCycleScrollViewExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4655B49D20D54B090010E50D /* place.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = place.jpg; sourceTree = "<group>"; };
 		4655B49E20D54B090010E50D /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		4655B49F20D54B090010E50D /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
@@ -117,39 +111,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		46120D8020E33275009B90C6 /* SBCycleScrollView */ = {
+		46120DDA20E37B59009B90C6 /* SBCycleScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				46120D8120E33275009B90C6 /* Core */,
-				46120D8620E33275009B90C6 /* CHIPageControl */,
+				46120DDB20E37B59009B90C6 /* Core */,
+				46120DE020E37B59009B90C6 /* CHIPageControl */,
 			);
 			path = SBCycleScrollView;
 			sourceTree = "<group>";
 		};
-		46120D8120E33275009B90C6 /* Core */ = {
+		46120DDB20E37B59009B90C6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				46120D8220E33275009B90C6 /* UIView+Extension.swift */,
-				46120D8320E33275009B90C6 /* CollectionViewCell.swift */,
-				46120D8420E33275009B90C6 /* CycleScrollOptions.swift */,
-				46120D8520E33275009B90C6 /* CycleScrollView.swift */,
+				46120DDC20E37B59009B90C6 /* UIView+Extension.swift */,
+				46120DDD20E37B59009B90C6 /* CollectionViewCell.swift */,
+				46120DDE20E37B59009B90C6 /* CycleScrollOptions.swift */,
+				46120DDF20E37B59009B90C6 /* CycleScrollView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		46120D8620E33275009B90C6 /* CHIPageControl */ = {
+		46120DE020E37B59009B90C6 /* CHIPageControl */ = {
 			isa = PBXGroup;
 			children = (
-				46120D8720E33275009B90C6 /* CHIBasePageControl.swift */,
-				46120D8820E33275009B90C6 /* CHIPageControlJalapeno.swift */,
-				46120D8920E33275009B90C6 /* CHIPageControlAleppo.swift */,
-				46120D8A20E33275009B90C6 /* CHIPageControlJaloro.swift */,
-				46120D8B20E33275009B90C6 /* CHIPageControlChimayo.swift */,
-				46120D8C20E33275009B90C6 /* CHIPageControlPuya.swift */,
-				46120D8D20E33275009B90C6 /* CHIPageControllable.swift */,
-				46120D8E20E33275009B90C6 /* CHIPageControlPaprika.swift */,
-				46120D8F20E33275009B90C6 /* CHIPageControlAji.swift */,
-				46120D9020E33275009B90C6 /* CHILayer.swift */,
+				46120DE120E37B59009B90C6 /* CHIBasePageControl.swift */,
+				46120DE220E37B59009B90C6 /* CHIPageControlJalapeno.swift */,
+				46120DE320E37B59009B90C6 /* CHIPageControlAleppo.swift */,
+				46120DE420E37B59009B90C6 /* CHIPageControlJaloro.swift */,
+				46120DE520E37B59009B90C6 /* CHIPageControlChimayo.swift */,
+				46120DE620E37B59009B90C6 /* CHIPageControlPuya.swift */,
+				46120DE720E37B59009B90C6 /* CHIPageControllable.swift */,
+				46120DE820E37B59009B90C6 /* CHIPageControlPaprika.swift */,
+				46120DE920E37B59009B90C6 /* CHIPageControlAji.swift */,
+				46120DEA20E37B59009B90C6 /* CHILayer.swift */,
 			);
 			path = CHIPageControl;
 			sourceTree = "<group>";
@@ -157,9 +151,7 @@
 		4655B44320D54A380010E50D = {
 			isa = PBXGroup;
 			children = (
-				4655B44E20D54A380010E50D /* SBCycleScrollViewDemo */,
-				4655B46320D54A390010E50D /* SBCycleScrollViewDemoTests */,
-				4655B46E20D54A390010E50D /* SBCycleScrollViewDemoUITests */,
+				4655B44E20D54A380010E50D /* SBCycleScrollViewExample */,
 				4655B44D20D54A380010E50D /* Products */,
 				5890FB0998D530CB6CB22235 /* Pods */,
 				CFE68342011B73FF76FF4DA8 /* Frameworks */,
@@ -169,17 +161,17 @@
 		4655B44D20D54A380010E50D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4655B44C20D54A380010E50D /* SBCycleScrollViewDemo.app */,
-				4655B46020D54A390010E50D /* SBCycleScrollViewDemoTests.xctest */,
-				4655B46B20D54A390010E50D /* SBCycleScrollViewDemoUITests.xctest */,
+				4655B44C20D54A380010E50D /* SBCycleScrollViewExample.app */,
+				4655B46020D54A390010E50D /* SBCycleScrollViewExampleTests.xctest */,
+				4655B46B20D54A390010E50D /* SBCycleScrollViewExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4655B44E20D54A380010E50D /* SBCycleScrollViewDemo */ = {
+		4655B44E20D54A380010E50D /* SBCycleScrollViewExample */ = {
 			isa = PBXGroup;
 			children = (
-				46120D8020E33275009B90C6 /* SBCycleScrollView */,
+				46120DDA20E37B59009B90C6 /* SBCycleScrollView */,
 				4655B44F20D54A380010E50D /* AppDelegate.swift */,
 				4655B45120D54A380010E50D /* ViewController.swift */,
 				4655B4A120D54B090010E50D /* DemoCell.swift */,
@@ -192,25 +184,7 @@
 				4655B45820D54A390010E50D /* LaunchScreen.storyboard */,
 				4655B45B20D54A390010E50D /* Info.plist */,
 			);
-			path = SBCycleScrollViewDemo;
-			sourceTree = "<group>";
-		};
-		4655B46320D54A390010E50D /* SBCycleScrollViewDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				4655B46420D54A390010E50D /* SBCycleScrollViewDemoTests.swift */,
-				4655B46620D54A390010E50D /* Info.plist */,
-			);
-			path = SBCycleScrollViewDemoTests;
-			sourceTree = "<group>";
-		};
-		4655B46E20D54A390010E50D /* SBCycleScrollViewDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				4655B46F20D54A390010E50D /* SBCycleScrollViewDemoUITests.swift */,
-				4655B47120D54A390010E50D /* Info.plist */,
-			);
-			path = SBCycleScrollViewDemoUITests;
+			path = SBCycleScrollViewExample;
 			sourceTree = "<group>";
 		};
 		5890FB0998D530CB6CB22235 /* Pods */ = {
@@ -233,9 +207,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4655B44B20D54A380010E50D /* SBCycleScrollViewDemo */ = {
+		4655B44B20D54A380010E50D /* SBCycleScrollViewExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4655B47420D54A390010E50D /* Build configuration list for PBXNativeTarget "SBCycleScrollViewDemo" */;
+			buildConfigurationList = 4655B47420D54A390010E50D /* Build configuration list for PBXNativeTarget "SBCycleScrollViewExample" */;
 			buildPhases = (
 				D81B978A8EC199874A7398A9 /* [CP] Check Pods Manifest.lock */,
 				4655B44820D54A380010E50D /* Sources */,
@@ -247,14 +221,14 @@
 			);
 			dependencies = (
 			);
-			name = SBCycleScrollViewDemo;
+			name = SBCycleScrollViewExample;
 			productName = SBCycleScrollViewDemo;
-			productReference = 4655B44C20D54A380010E50D /* SBCycleScrollViewDemo.app */;
+			productReference = 4655B44C20D54A380010E50D /* SBCycleScrollViewExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4655B45F20D54A390010E50D /* SBCycleScrollViewDemoTests */ = {
+		4655B45F20D54A390010E50D /* SBCycleScrollViewExampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4655B47720D54A390010E50D /* Build configuration list for PBXNativeTarget "SBCycleScrollViewDemoTests" */;
+			buildConfigurationList = 4655B47720D54A390010E50D /* Build configuration list for PBXNativeTarget "SBCycleScrollViewExampleTests" */;
 			buildPhases = (
 				4655B45C20D54A390010E50D /* Sources */,
 				4655B45D20D54A390010E50D /* Frameworks */,
@@ -265,14 +239,14 @@
 			dependencies = (
 				4655B46220D54A390010E50D /* PBXTargetDependency */,
 			);
-			name = SBCycleScrollViewDemoTests;
+			name = SBCycleScrollViewExampleTests;
 			productName = SBCycleScrollViewDemoTests;
-			productReference = 4655B46020D54A390010E50D /* SBCycleScrollViewDemoTests.xctest */;
+			productReference = 4655B46020D54A390010E50D /* SBCycleScrollViewExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4655B46A20D54A390010E50D /* SBCycleScrollViewDemoUITests */ = {
+		4655B46A20D54A390010E50D /* SBCycleScrollViewExampleUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4655B47A20D54A390010E50D /* Build configuration list for PBXNativeTarget "SBCycleScrollViewDemoUITests" */;
+			buildConfigurationList = 4655B47A20D54A390010E50D /* Build configuration list for PBXNativeTarget "SBCycleScrollViewExampleUITests" */;
 			buildPhases = (
 				4655B46720D54A390010E50D /* Sources */,
 				4655B46820D54A390010E50D /* Frameworks */,
@@ -283,9 +257,9 @@
 			dependencies = (
 				4655B46D20D54A390010E50D /* PBXTargetDependency */,
 			);
-			name = SBCycleScrollViewDemoUITests;
+			name = SBCycleScrollViewExampleUITests;
 			productName = SBCycleScrollViewDemoUITests;
-			productReference = 4655B46B20D54A390010E50D /* SBCycleScrollViewDemoUITests.xctest */;
+			productReference = 4655B46B20D54A390010E50D /* SBCycleScrollViewExampleUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -311,7 +285,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4655B44720D54A380010E50D /* Build configuration list for PBXProject "SBCycleScrollViewDemo" */;
+			buildConfigurationList = 4655B44720D54A380010E50D /* Build configuration list for PBXProject "SBCycleScrollViewExample" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -324,9 +298,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4655B44B20D54A380010E50D /* SBCycleScrollViewDemo */,
-				4655B45F20D54A390010E50D /* SBCycleScrollViewDemoTests */,
-				4655B46A20D54A390010E50D /* SBCycleScrollViewDemoUITests */,
+				4655B44B20D54A380010E50D /* SBCycleScrollViewExample */,
+				4655B45F20D54A390010E50D /* SBCycleScrollViewExampleTests */,
+				4655B46A20D54A390010E50D /* SBCycleScrollViewExampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -406,23 +380,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46120D9720E33275009B90C6 /* CHIPageControlAleppo.swift in Sources */,
-				46120D9620E33275009B90C6 /* CHIPageControlJalapeno.swift in Sources */,
-				46120D9520E33275009B90C6 /* CHIBasePageControl.swift in Sources */,
-				46120D9220E33275009B90C6 /* CollectionViewCell.swift in Sources */,
-				46120D9820E33275009B90C6 /* CHIPageControlJaloro.swift in Sources */,
+				46120DF120E37B59009B90C6 /* CHIPageControlAleppo.swift in Sources */,
+				46120DF020E37B59009B90C6 /* CHIPageControlJalapeno.swift in Sources */,
+				46120DEF20E37B59009B90C6 /* CHIBasePageControl.swift in Sources */,
+				46120DEC20E37B59009B90C6 /* CollectionViewCell.swift in Sources */,
+				46120DF220E37B59009B90C6 /* CHIPageControlJaloro.swift in Sources */,
 				4655B45220D54A380010E50D /* ViewController.swift in Sources */,
-				46120D9920E33275009B90C6 /* CHIPageControlChimayo.swift in Sources */,
-				46120D9420E33275009B90C6 /* CycleScrollView.swift in Sources */,
-				46120D9D20E33275009B90C6 /* CHIPageControlAji.swift in Sources */,
-				46120D9320E33275009B90C6 /* CycleScrollOptions.swift in Sources */,
+				46120DF320E37B59009B90C6 /* CHIPageControlChimayo.swift in Sources */,
+				46120DEE20E37B59009B90C6 /* CycleScrollView.swift in Sources */,
+				46120DF720E37B59009B90C6 /* CHIPageControlAji.swift in Sources */,
+				46120DED20E37B59009B90C6 /* CycleScrollOptions.swift in Sources */,
 				4655B45020D54A380010E50D /* AppDelegate.swift in Sources */,
-				46120D9E20E33275009B90C6 /* CHILayer.swift in Sources */,
-				46120D9B20E33275009B90C6 /* CHIPageControllable.swift in Sources */,
-				46120D9120E33275009B90C6 /* UIView+Extension.swift in Sources */,
+				46120DF820E37B59009B90C6 /* CHILayer.swift in Sources */,
+				46120DF520E37B59009B90C6 /* CHIPageControllable.swift in Sources */,
+				46120DEB20E37B59009B90C6 /* UIView+Extension.swift in Sources */,
 				4655B4A620D54B0A0010E50D /* DemoCell.swift in Sources */,
-				46120D9C20E33275009B90C6 /* CHIPageControlPaprika.swift in Sources */,
-				46120D9A20E33275009B90C6 /* CHIPageControlPuya.swift in Sources */,
+				46120DF620E37B59009B90C6 /* CHIPageControlPaprika.swift in Sources */,
+				46120DF420E37B59009B90C6 /* CHIPageControlPuya.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,7 +404,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4655B46520D54A390010E50D /* SBCycleScrollViewDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +411,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4655B47020D54A390010E50D /* SBCycleScrollViewDemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,12 +419,12 @@
 /* Begin PBXTargetDependency section */
 		4655B46220D54A390010E50D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4655B44B20D54A380010E50D /* SBCycleScrollViewDemo */;
+			target = 4655B44B20D54A380010E50D /* SBCycleScrollViewExample */;
 			targetProxy = 4655B46120D54A390010E50D /* PBXContainerItemProxy */;
 		};
 		4655B46D20D54A390010E50D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4655B44B20D54A380010E50D /* SBCycleScrollViewDemo */;
+			target = 4655B44B20D54A380010E50D /* SBCycleScrollViewExample */;
 			targetProxy = 4655B46C20D54A390010E50D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -598,7 +570,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EUCP69KUN;
-				INFOPLIST_FILE = SBCycleScrollViewDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SBCycleScrollViewExample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -617,7 +589,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EUCP69KUN;
-				INFOPLIST_FILE = SBCycleScrollViewDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SBCycleScrollViewExample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -646,7 +618,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SBCycleScrollViewDemo.app/SBCycleScrollViewDemo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SBCycleScrollViewExample.app/SBCycleScrollViewExample";
 			};
 			name = Debug;
 		};
@@ -667,7 +639,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SBCycleScrollViewDemo.app/SBCycleScrollViewDemo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SBCycleScrollViewExample.app/SBCycleScrollViewExample";
 			};
 			name = Release;
 		};
@@ -714,7 +686,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4655B44720D54A380010E50D /* Build configuration list for PBXProject "SBCycleScrollViewDemo" */ = {
+		4655B44720D54A380010E50D /* Build configuration list for PBXProject "SBCycleScrollViewExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4655B47220D54A390010E50D /* Debug */,
@@ -723,7 +695,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4655B47420D54A390010E50D /* Build configuration list for PBXNativeTarget "SBCycleScrollViewDemo" */ = {
+		4655B47420D54A390010E50D /* Build configuration list for PBXNativeTarget "SBCycleScrollViewExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4655B47520D54A390010E50D /* Debug */,
@@ -732,7 +704,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4655B47720D54A390010E50D /* Build configuration list for PBXNativeTarget "SBCycleScrollViewDemoTests" */ = {
+		4655B47720D54A390010E50D /* Build configuration list for PBXNativeTarget "SBCycleScrollViewExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4655B47820D54A390010E50D /* Debug */,
@@ -741,7 +713,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4655B47A20D54A390010E50D /* Build configuration list for PBXNativeTarget "SBCycleScrollViewDemoUITests" */ = {
+		4655B47A20D54A390010E50D /* Build configuration list for PBXNativeTarget "SBCycleScrollViewExampleUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4655B47B20D54A390010E50D /* Debug */,

@@ -56,7 +56,7 @@ extension ViewController{
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = DemoCell.init(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-        var op = CycleOption()
+        var op = CycleOptions()
         cell.cycleScrollView.imageURLStringsGroup = imageUrls
         switch indexPath.section {
         case 1:
@@ -116,7 +116,7 @@ extension ViewController{
             op.pageDotColor = .white
         default: break
         }
-        cell.cycleScrollView.option = op
+        cell.cycleScrollView.options = op
         return cell
     }
 }
