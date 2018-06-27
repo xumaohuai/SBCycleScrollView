@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
 			功能强大的图片、文字轮播器,支持纯文字、网络图片、本地图片、图片加文字以及各种圆点样式
 		      DESC
   s.homepage     = "https://github.com/xumaohuai/SBCycleScrollView"
-  s.license          = "Copyright (c) 2018 maohuaiXu"
+  s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "徐老茂" => "xmh_iOS@126.com"}
   s.platform     = :ios, "9.0"
   s.source        = { :git => "https://github.com/xumaohuai/SBCycleScrollView.git", :tag => "0.0.5"}
