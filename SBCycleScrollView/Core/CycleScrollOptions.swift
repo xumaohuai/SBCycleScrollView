@@ -35,5 +35,8 @@ public struct CycleOptions {
     public  var pageStyle: PageControlStyle = PageControlStyle.classic//pageControl样式,默认系统样式
     public  var currentPageDotColor: UIColor = .white//当前pageControl圆点的颜色
     public  var pageDotColor: UIColor = .gray//其他pageControl圆点的颜色
+    public init() {
+        
+    }
 }
 
