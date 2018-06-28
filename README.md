@@ -3,7 +3,7 @@
 ![](https://img.shields.io/badge/platform-iOS-red.svg) ![](https://img.shields.io/badge/language-Swift-orange.svg)
 ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)
 ### 支持pod导入
-pod 'SBCycleScrollView','~> 0.0.4'
+pod 'SBCycleScrollView','~> 0.0.8'
 
 
 #### SBCycleScrollView是一个简单好用的图片轮播器,支持网络图片,本地图片,文字,滑动方向,storyboard以及各种样式.
